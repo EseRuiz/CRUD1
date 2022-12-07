@@ -1,0 +1,15 @@
+CREATE TABLE "Padre" (
+	"idPadre"	INTEGER,
+	"nombre"	VARCHAR(50),
+	"apellido"	VARCHAR(50),
+	PRIMARY KEY("idPadre" AUTOINCREMENT)
+);
+
+CREATE TABLE "Hijo" (
+	"idHijo"	INTEGER,
+	"id_Padre"	INTEGER,
+	"nombre_hijo"	VARCHAR(50),
+	"apellido_hijo"	VARCHAR(50),
+	FOREIGN KEY("id_Padre") REFERENCES "Padre"("idPadre"),
+	PRIMARY KEY("idHijo" AUTOINCREMENT)
+);
